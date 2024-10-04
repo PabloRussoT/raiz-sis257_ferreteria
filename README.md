@@ -2,7 +2,7 @@
 
 # Proyecto Final: Sistema de Gestión para Ferretería
 
-###Integrantes: Russo Tancara Jhonattan Pablo -Zuñiga Mendez Jhonny Agustín
+Integrantes: Russo Tancara Jhonattan Pablo -Zuñiga Mendez Jhonny Agustín
 ## Descripción del Negocio
 
 Este sistema de gestión de ferretería está diseñado para simplificar la administración del negocio, permitiendo gestionar usuarios, clientes, productos, ventas, y los detalles de cada transacción de manera eficiente. Su objetivo principal es mantener un control adecuado del inventario y facilitar las ventas diarias, optimizando el flujo de trabajo y mejorando la organización de la ferretería.
