@@ -1,85 +1,48 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+   Proyecto Final: Sistema de Gestión para Ferretería
+Descripción del Negocio
+Este sistema de gestión de ferretería está diseñado para simplificar la administración del negocio, permitiendo gestionar usuarios, clientes, productos, ventas, y los detalles de cada transacción de manera eficiente. Su objetivo principal es mantener un control adecuado del inventario y facilitar las ventas diarias, optimizando el flujo de trabajo y mejorando la organización de la ferretería.
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Entidades y Campos Tentativos
+1. Usuario
+Gestiona los usuarios que acceden al sistema, incluyendo administradores y empleados.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+id_usuario: ID único del usuario.
+nombre_usuario: Nombre del usuario.
+email: Correo electrónico del usuario.
+password: Contraseña para autenticación.
+rol: Rol del usuario (ej. administrador, empleado).
+2. Cliente
+Registra y gestiona la información de los clientes de la ferretería.
 
-## Description
+id_cliente: ID único del cliente.
+nombre: Nombre del cliente.
+apellido: Apellido del cliente.
+telefono: Número de contacto del cliente.
+email: Correo electrónico del cliente.
+direccion: Dirección del cliente.
+3. Producto
+Gestiona los productos disponibles en el inventario de la ferretería.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+id_producto: ID único del producto.
+nombre_producto: Nombre del producto.
+descripcion: Descripción breve del producto.
+precio: Precio unitario del producto.
+stock: Cantidad disponible en inventario.
+categoria: Categoría del producto (ej. herramientas, materiales de construcción).
+4. Venta
+Registra las ventas realizadas en la ferretería.
 
-## Project setup
+id_venta: ID único de la venta.
+fecha: Fecha de la transacción.
+id_cliente: ID del cliente que realiza la compra.
+total: Monto total de la venta.
+id_usuario: ID del usuario que registra la venta.
+5. Detalle_Venta
+Almacena los detalles específicos de cada venta, incluyendo los productos vendidos.
 
-```bash
-$ npm install
-```
-
-## Compile and run the project
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Run tests
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+id_detalle: ID único del detalle de la venta.
+id_venta: ID de la venta asociada.
+id_producto: ID del producto vendido.
+cantidad: Cantidad de producto vendido.
+precio_unitario: Precio unitario del producto en el momento de la venta.
+subtotal: Subtotal por cada producto (cantidad * precio_unitario).
